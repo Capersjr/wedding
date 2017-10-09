@@ -67,6 +67,7 @@ class BgVideo extends Component {
 
   _onReady(event) {
     event.target.unMute();
+    event.target.setLoop(true);
   }
 }
 
