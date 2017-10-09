@@ -1,4 +1,11 @@
-.bg-video video {
+.bg-video {
+    display: inline-block;
+    width: 1920;
+    height: 1080;
+    background: url('assets/StartingPosterFrame.jpg');
+}
+
+.bg-video iframe {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -12,8 +19,8 @@
     position: fixed;
     top: 90%;
     right: 1%;
-    width: 45px;
-    height: 45px;
+    width: 75px;
+    height: 75px;
     padding: 0px;
     z-index: 100;
 }

@@ -1,0 +1,69 @@
+<html>
+
+<head>
+    <title>Title Text</title>
+    <style type="text/css">
+        #muteYouTubeVideoPlayer {
+            display: inline-block;
+            width: 1920;
+            height: 1080;
+            background: url('src/assets/StartingPosterFrame.e352b040.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Test YouTube Player</h1>
+    <div id="muteYouTubeVideoPlayer"></div>
+    <button onclick="muteToggle()">Mute</button>
+
+
+    <script async src="https://www.youtube.com/iframe_api"></script>
+    <script>
+        var player;
+
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('muteYouTubeVideoPlayer', {
+                videoId: 'ozhpggFu2xw', // YouTube Video ID
+                width: 1920, // Player width (in px)
+                height: 1080, // Player height (in px)
+                playerVars: {
+                    autoplay: 1, // Auto-play the video on load
+                    controls: 0, // Show pause/play buttons in player
+                    showinfo: 0, // Hide the video title
+                    modestbranding: 1, // Hide the Youtube Logo
+                    loop: 1, // Run the video in a loop
+                    fs: 0, // Hide the full screen button
+                    cc_load_policy: 0, // Hide closed captions
+                    iv_load_policy: 3, // Hide the Video Annotations
+                    autohide: 0, // Hide video controls when playing
+                    rel: 0, // show related videos when playback ends
+                },
+                events: {
+                    onReady: function(e) {
+                        e.target.mute();
+                    }
+                }
+            });
+        }
+
+        var muted = true;
+
+        function muteToggle() {
+            if (player.isMuted()) {
+                muted = false;
+                player.unMute();
+            } else {
+                player.mute();
+            }
+
+        }
+
+        // Written by @labnol
+    </script>
+
+</body>
+
+</html>
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ozhpggFu2xw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe> -->

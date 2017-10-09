@@ -35,6 +35,10 @@ class Credits extends Component {
                 Alea Gillead &amp; Vincent Capers Jr.
             </p>
 
+            <p>
+                <a href="#top">Back</a>
+            </p>
+
             </div>
             <div id="CreditsLink" className="Credits-link">
                 <a href="#Credits">Credits</a>

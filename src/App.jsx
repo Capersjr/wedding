@@ -4,16 +4,29 @@ import './App.css';
 import BgVideo from './BgVideo.jsx';
 import Credits from './Credits.jsx';
 
-import videoMp4 from './assets/wedding-save-the-date.mp4';
 import posterUrl from './assets/StartingPosterFrame.jpg';
 import volume from './assets/volume.svg';
 import volumeMuted from './assets/volume-mute.svg';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      videoId : "ozhpggFu2xw",
+      height: 1080,
+      width: 1920,
+      volume: volume,
+      volumeMuted:volumeMuted,
+      posterUrl: posterUrl};
+  }
+
   render() {
     return (
       <div className="App">
-        <BgVideo posterUrl={posterUrl} videoMp4={videoMp4} volume={volume} volumeMuted={volumeMuted}/>  
+        <div id="top"></div>
+        {/* <BgVideo posterUrl={posterUrl} videoMp4={videoMp4} volume={volume} volumeMuted={volumeMuted}/>   */}
+        <BgVideo posterUrl={this.state.posterUrl} videoId={this.state.videoId} height={this.state.height} width={this.state.width} volume={this.state.volume} volumeMuted={this.state.volumeMuted}/>
         {/* <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Alea &amp; Vincent</h2>
