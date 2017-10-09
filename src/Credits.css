@@ -1,0 +1,59 @@
+.Credits {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: rgba(2, 2, 2, 0.90);
+    color: white;
+    padding: 25px;
+    position: absolute;
+    top: 210%;
+    width: 90%;
+}
+
+.Credits-production {
+    font-size: 4.00rem;
+}
+
+.Credits-crew {
+    font-size: 2.75rem;
+}
+
+.Credits-cast {
+    font-size: 3.00rem;
+}
+
+.Credits-producers {
+    font-size: 3.75rem;
+}
+
+.Credits-link {
+    position: absolute;
+    top: 90%;
+    left: 1%;
+    text-align: left;
+    font-size: 1.75rem;
+}
+
+.Credits-link a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.Credits-link a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.Credits-link a:hover {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.Credits-link a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: none;
+}
